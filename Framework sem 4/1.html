@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0%;
+            /* font-size: 24px; */
+            text-align: center;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            align-self: center;
+            justify-self: center;
+            height: 200px;
+            width: 400px;
+            background-color: lightblue;
+            display: flex;
+            border: 1px solid black;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input {
+            font-size: 16px;
+            height: 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            text-align: left;
+            padding: 5px;
+            padding-left: 15px;
+        }
+        button{
+            margin: 10px;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome Application</h1>
+        <form action="" method="">
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Enter name">
+            <p></p>
+            <button type="button" onclick="getmessage()">Submit</button>
+            <p id="output"></p>
+        </form>
+    </div>
+    <script>
+        function getmessage(){
+            var x = document.getElementById("name").value;
+            document.getElementById("output").innerHTML = "Welcome " + x + " !";
+        } 
+    </script>
+</body>
+</html>

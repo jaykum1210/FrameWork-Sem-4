@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0%;
+            text-align: center;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div{
+            height: 300px;
+            width: 400px;
+            background-color: lightblue;
+            display: flex;
+            border: 1px solid black;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input {
+            font-size: 16px;
+            height: 25px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            text-align: left;
+            padding: 5px;
+            padding-left: 15px;
+        }
+        button{
+            margin: 10px;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Enter Two numbers</h1>
+        <p>
+            <label for="first">First number: </label>
+            <input type="number" id="firstnum">
+        </p>
+        <p>
+            <label for="second">Seoncd number: </label>
+            <input type="number" id="secondnum">
+        </p>
+        <button type="button" onclick="getresult()">Submit</button>
+        <p id="result" style="font-size: 20px;">Submit First</p>
+    </div>
+    <script>
+        function getresult() {
+            var a = Number(document.getElementById("firstnum").value);
+            var b = Number(document.getElementById("secondnum").value); 
+            document.getElementById("result").innerHTML = "Result = " + (a+b);
+        }
+    </script>
+</body>
+</html>
